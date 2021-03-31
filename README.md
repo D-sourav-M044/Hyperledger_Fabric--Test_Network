@@ -174,19 +174,19 @@ Install the latest version of npm if it is not already installed.<br><br>
  <br>
  <br>
  `
- Creating network "fabric_test" with the default driver
-Creating volume "net_orderer.example.com" with default driver
-Creating volume "net_peer0.org1.example.com" with default driver
-Creating volume "net_peer0.org2.example.com" with default driver
-Creating peer0.org2.example.com ... done
-Creating orderer.example.com    ... done
-Creating peer0.org1.example.com ... done
-Creating cli                    ... done
-CONTAINER ID   IMAGE                               COMMAND             CREATED         STATUS                  PORTS                                            NAMES
-1667543b5634   hyperledger/fabric-tools:latest     "/bin/bash"         1 second ago    Up Less than a second                                                    cli
-b6b117c81c7f   hyperledger/fabric-peer:latest      "peer node start"   2 seconds ago   Up 1 second             0.0.0.0:7051->7051/tcp                           peer0.org1.example.com
-703ead770e05   hyperledger/fabric-orderer:latest   "orderer"           2 seconds ago   Up Less than a second   0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp   orderer.example.com
-718d43f5f312   hyperledger/fabric-peer:latest      "peer node start"   2 seconds ago   Up 1 second             7051/tcp, 0.0.0.0:9051->9051/tcp                 peer0.org2.example.com
+ Creating network "fabric_test" with the default driver<br>
+Creating volume "net_orderer.example.com" with default driver<br>
+Creating volume "net_peer0.org1.example.com" with default driver<br>
+Creating volume "net_peer0.org2.example.com" with default driver<br>
+Creating peer0.org2.example.com ... done<br>
+Creating orderer.example.com    ... done<br>
+Creating peer0.org1.example.com ... done<br>
+Creating cli                    ... done<br>
+CONTAINER ID   IMAGE                               COMMAND             CREATED         STATUS                  PORTS                                            NAMES<br>
+1667543b5634   hyperledger/fabric-tools:latest     "/bin/bash"         1 second ago    Up Less than a second                                                    cli<br>
+b6b117c81c7f   hyperledger/fabric-peer:latest      "peer node start"   2 seconds ago   Up 1 second             0.0.0.0:7051->7051/tcp                           peer0.org1.example.com<br>
+703ead770e05   hyperledger/fabric-orderer:latest   "orderer"           2 seconds ago   Up Less than a second   0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp   orderer.example.com<br>
+718d43f5f312   hyperledger/fabric-peer:latest      "peer node start"   2 seconds ago   Up 1 second             7051/tcp, 0.0.0.0:9051->9051/tcp                 peer0.org2.example.com<br>
 `
  
  
