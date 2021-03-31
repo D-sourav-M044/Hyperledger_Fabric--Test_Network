@@ -20,15 +20,18 @@ Install the latest version of git if it is not already installed.<br>
 <br>
 `sudo apt-get install git`
 
----
+
 ### cURL
 ---
-Install the latest version of cURL if it is not already installed.<br>
+Install the latest version of cURL if it is not already installed.<br><br>
 `sudo apt-get install curl`
+
+
 ### Docker
-Install the latest version of Docker if it is not already installed.<br>
+---
+Install the latest version of Docker if it is not already installed.<br><br>
 `Sudo apt install docker`
-<br>Make permission For Docker<br>
+<br><br>Make permission For Docker<br><br>
 `dockr ps -a`
 ### Docker-Compose
 Install the latest version of Docker-Compose if it is not already installed.<br>
