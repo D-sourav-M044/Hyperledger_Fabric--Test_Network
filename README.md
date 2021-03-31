@@ -146,3 +146,10 @@ Install the latest version of npm if it is not already installed.<br><br>
 <br><br>
 `curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh | bash -s -- 2.3.1 1.4.9`
        <br><br> you can also use version 1.1.0<br> 
+ <br>
+ <br>
+ <br>
+ <br>
+ # Using the Fabric test network
+ ---
+ 
