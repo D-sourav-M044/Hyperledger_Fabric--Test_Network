@@ -16,6 +16,8 @@
 ### Git
 Install the latest version of git if it is not already installed.<br>
 `sudo apt-get install git`
+
+
 ### cURL
 Install the latest version of cURL if it is not already installed.<br>
 `sudo apt-get install curl`
