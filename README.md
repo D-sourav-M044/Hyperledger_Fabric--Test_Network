@@ -29,6 +29,10 @@ Install the latest version of git if it is not already installed.<br>
 Install the latest version of cURL if it is not already installed.<br><br>
 `sudo apt-get install curl`
 
+<br>
+<br>
+<br>
+<br>
 
 ### Docker
 ---
@@ -36,58 +40,87 @@ Install the latest version of Docker if it is not already installed.<br><br>
 `Sudo apt install docker`
 <br><br>Make permission For Docker<br><br>
 `dockr ps -a`
+
+<br>
+<br>
+<br>
+<br>
+
 ### Docker-Compose
-Install the latest version of Docker-Compose if it is not already installed.<br>
+---
+Install the latest version of Docker-Compose if it is not already installed.<br><br>
 `sudo apt-get -y install docker-compose`
-<br>Once installed, confirm that the latest versions of both Docker and Docker Compose executables were installed.<br>
+<br><br>Once installed, confirm that the latest versions of both Docker and Docker Compose executables were installed.<br><br>
 `docker --version`
-<br>Docker version 19.03.12, build 48a66213fe<br>
+<br><br>Docker version 19.03.12, build 48a66213fe<br><br>
 `docker-compose --version`
-<br>docker-compose version 1.27.2, build 18f557f9<br>
+<br><br>docker-compose version 1.27.2, build 18f557f9<br><br>
   ##### Docker-compose Update
 Sometimes latest docker don't comes with the latest version. So you can do it manually with the following process-<br>
-<br>Remove the previous version of docker-compose<br>
+<br>Remove the previous version of docker-compose<br><br>
 `sudo apt-get remove docker-compose`
 `sudo rm /usr/local/bin/docker-compose`
-<br>version set<br>
+<br><br>version set<br><br>
 `VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)`
-<br>Installation<br>
+<br><br>Installation<br><br>
 `DESTINATION=/usr/local/bin/docker-compose`
 `sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) -o $DESTINATION`
 `sudo chmod 755 $DESTINATION`
+
+<br>
+<br>
+<br>
+<br>
+
 ### Docker Daemon
-Make sure the Docker daemon is running.<br>
+---
+Make sure the Docker daemon is running.<br><br>
 `sudo systemctl start docker`
-<br>  Optional: If you want the Docker daemon to start when the system starts, use the following:<br>
+<br><br>  Optional: If you want the Docker daemon to start when the system starts, use the following:<br><br>
 `sudo systemctl enable docker`
+
+<br>
+<br>
+<br>
+<br>
+
 ### Docker Group
-Add your user to the Docker group.<br>
+---
+Add your user to the Docker group.<br><br>
 `sudo usermod -a -G docker <username>`
+
+<br>
+<br>
+<br>
+<br>
+
+
 ### Go
-Optional: Install the latest version of Go if it is not already installed (only required if you will be writing Go chaincode or SDK applications).<br>
+---
+Optional: Install the latest version of Go if it is not already installed (only required if you will be writing Go chaincode or SDK applications).<br><br>
 `sudo apt install golang-go`
-<br>With this command you can't have golang with the latest version sometimes<br>
-<br>For the latest version of Go you have go through these following process<br>
+<br><br>With this command you can't have golang with the latest version sometimes<br>
+<br>For the latest version of Go you have go through these following process<br><br>
 **1. Download the Golang**
 <br> Because the Golang package is not always up to date in the Ubuntu repository, it's preferred to download the official website's latest version.<br>
-<br>Change to a temporary directory for the installation.<br>
+<br>Change to a temporary directory for the installation.<br><br>
 `cd /tmp`
-<br>Select the latest package for your architecture from https://golang.org/dl/ and download it.<br>
+<br><br>Select the latest package for your architecture from https://golang.org/dl/ and download it.<br><br>
 `wget https://golang.org/dl/go1.<VERSION_NUMBER>.linux-amd64.tar.gz`
-<br> use the requied version at the place of <VERSION_NUMBER><br> 
-For example - version 1.15.4
+<br><br> use the requied version at the place of <VERSION_NUMBER><br> 
+For example - version 1.15.4<br>
 `wget https://golang.org/dl/go1.15.4.linux-amd64.tar.gz`
 <br>**2. Extract to the Installation Location**<br>
-Extract the Golang executable to /usr/local.<br>
+Extract the Golang executable to /usr/local.<br><br>
 `sudo tar -C /usr/local -xzf go1.<VERSION_NUMBER>.linux-amd64.tar.gz`
 <br>**3. Set Environment**<br>
-<br>To use Golang, set the required environment variables in your .profile.<br>
+<br>To use Golang, set the required environment variables in your .profile.<br><br>
 `echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile`
 `echo "export GOPATH=~/.go" >> ~/.profile`
-<br>Reload your profile to begin using Golang.<br>
+<br><br>Reload your profile to begin using Golang.<br><br>
 `source ~/.profile`
-<br>**4. Test the Installation**
-Verify you installed the expected version of Golang.<br>
+<br><br>**4. Test the Installation**<br>
+Verify you installed the expected version of Golang.<br><br>
 `go version`
 
 
