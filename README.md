@@ -28,10 +28,8 @@ Install the latest version of git if it is not already installed.<br>
 ---
 Install the latest version of cURL if it is not already installed.<br><br>
 `sudo apt-get install curl`
-
 <br>
 <br>
-
 ### Docker
 ---
 Install the latest version of Docker if it is not already installed.<br><br>
