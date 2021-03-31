@@ -121,7 +121,7 @@ Install the latest version of npm if it is not already installed.<br><br>
 <br>
 
 # Download Fabric samples, docker images, and binaries.
-<br>
+---
 
 **Make a new directory for latest fabric sample**
 <br><br>
