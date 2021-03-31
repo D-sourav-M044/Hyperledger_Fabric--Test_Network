@@ -207,11 +207,11 @@ Install the latest version of npm if it is not already installed.<br><br>
 **You can now set the environment variables that allow you to operate the peer CLI as Org1:**
 <br>
 <br>
-export CORE_PEER_TLS_ENABLED=true
-export CORE_PEER_LOCALMSPID="Org1MSP"
-export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
-export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
-export CORE_PEER_ADDRESS=localhost:7051
+`export CORE_PEER_TLS_ENABLED=true`
+`export CORE_PEER_LOCALMSPID="Org1MSP"`
+`export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt`
+`export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp`
+`export CORE_PEER_ADDRESS=localhost:7051`
 <br>
 <br>
 **Run the following command to initialize the ledger with assets:**
