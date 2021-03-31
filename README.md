@@ -109,13 +109,15 @@ Install the latest version of nodejs if it is not already installed.<br><br>
 <br>
 <br>
 ## NPM
-Install the latest version of npm if it is not already installed.<br><br>
+---
+<br>Install the latest version of npm if it is not already installed.<br><br>
 `sudo apt-get install npm`
 <br>
 <br>
 <br>
 ---
 ---
+<br>
 #Download Fabric samples, docker images, and binaries.<br><br>
 
 
