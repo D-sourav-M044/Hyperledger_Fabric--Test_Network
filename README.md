@@ -22,14 +22,13 @@ Install the latest version of git if it is not already installed.<br>
 <br>
 <br>
 <br>
-<br>
+
 
 ### cURL
 ---
 Install the latest version of cURL if it is not already installed.<br><br>
 `sudo apt-get install curl`
 
-<br>
 <br>
 <br>
 
@@ -41,7 +40,6 @@ Install the latest version of Docker if it is not already installed.<br><br>
 `dockr ps -a`
 
 
-<br>
 <br>
 <br>
 
@@ -69,7 +67,6 @@ Sometimes latest docker don't comes with the latest version. So you can do it ma
 
 <br>
 <br>
-<br>
 
 ### Docker Daemon
 ---
@@ -81,7 +78,6 @@ Make sure the Docker daemon is running.<br><br>
 
 <br>
 <br>
-<br>
 
 ### Docker Group
 ---
@@ -89,7 +85,6 @@ Add your user to the Docker group.<br><br>
 `sudo usermod -a -G docker <username>`
 
 
-<br>
 <br>
 <br>
 
