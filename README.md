@@ -152,4 +152,41 @@ Install the latest version of npm if it is not already installed.<br><br>
  <br>
  # Using the Fabric test network
  ---
+ **You can find the scripts to bring up the network in the test-network directory of the fabric-samples repository. Navigate to the test network directory by using the following command:**
+ <br>
+ <br>
+ `cd fabric-samples/test-network`
+ <br>
+ <br>
+ **From inside the test-network directory, run the following command to remove any containers or artifacts from any previous runs:**
+ <br>
+ <br>
+ `./network.sh down`
+ <br>
+ <br>
+ **You can then bring up the network by issuing the following command. You will experience problems if you try to run the script from another directory:**
+ <br>
+ <br>
+ `./network.sh up`
+ <br>
+ <br>
+ **This command creates a Fabric network that consists of two peer nodes, one ordering node. No channel is created when you run ./network.sh up, though we will get there in a future step. If the command completes successfully, you will see the logs of the nodes being created:**
+ <br>
+ <br>
+ `
+ Creating network "fabric_test" with the default driver
+Creating volume "net_orderer.example.com" with default driver
+Creating volume "net_peer0.org1.example.com" with default driver
+Creating volume "net_peer0.org2.example.com" with default driver
+Creating peer0.org2.example.com ... done
+Creating orderer.example.com    ... done
+Creating peer0.org1.example.com ... done
+Creating cli                    ... done
+CONTAINER ID   IMAGE                               COMMAND             CREATED         STATUS                  PORTS                                            NAMES
+1667543b5634   hyperledger/fabric-tools:latest     "/bin/bash"         1 second ago    Up Less than a second                                                    cli
+b6b117c81c7f   hyperledger/fabric-peer:latest      "peer node start"   2 seconds ago   Up 1 second             0.0.0.0:7051->7051/tcp                           peer0.org1.example.com
+703ead770e05   hyperledger/fabric-orderer:latest   "orderer"           2 seconds ago   Up Less than a second   0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp   orderer.example.com
+718d43f5f312   hyperledger/fabric-peer:latest      "peer node start"   2 seconds ago   Up 1 second             7051/tcp, 0.0.0.0:9051->9051/tcp                 peer0.org2.example.com
+`
+ 
  
