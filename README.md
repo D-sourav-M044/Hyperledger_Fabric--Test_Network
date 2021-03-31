@@ -17,10 +17,13 @@
 ### Git
 ---
 Install the latest version of git if it is not already installed.<br>
+<br>
 `sudo apt-get install git`
 
-
+<br>
+---
 ### cURL
+---
 Install the latest version of cURL if it is not already installed.<br>
 `sudo apt-get install curl`
 ### Docker
