@@ -22,8 +22,6 @@ Install the latest version of git if it is not already installed.<br>
 <br>
 <br>
 <br>
-
-
 ### cURL
 ---
 Install the latest version of cURL if it is not already installed.<br><br>
@@ -36,11 +34,8 @@ Install the latest version of Docker if it is not already installed.<br><br>
 `Sudo apt install docker`
 <br><br>Make permission For Docker<br><br>
 `dockr ps -a`
-
-
 <br>
 <br>
-
 ### Docker-Compose
 ---
 Install the latest version of Docker-Compose if it is not already installed.<br><br>
@@ -61,32 +56,22 @@ Sometimes latest docker don't comes with the latest version. So you can do it ma
 `DESTINATION=/usr/local/bin/docker-compose`
 `sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) -o $DESTINATION`
 `sudo chmod 755 $DESTINATION`
-
-
 <br>
 <br>
-
 ### Docker Daemon
 ---
 Make sure the Docker daemon is running.<br><br>
 `sudo systemctl start docker`
 <br><br>  Optional: If you want the Docker daemon to start when the system starts, use the following:<br><br>
 `sudo systemctl enable docker`
-
-
 <br>
 <br>
-
 ### Docker Group
 ---
 Add your user to the Docker group.<br><br>
 `sudo usermod -a -G docker <username>`
-
-
 <br>
 <br>
-
-
 ### Go
 ---
 Optional: Install the latest version of Go if it is not already installed (only required if you will be writing Go chaincode or SDK applications).<br><br>
