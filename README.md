@@ -119,8 +119,8 @@ Install the latest version of npm if it is not already installed.<br><br>
 <br>
 <br>
 <br>
-# Download Fabric samples, docker images, and binaries.
-
+#Download Fabric samples, docker images, and binaries.
+<br>
 
 **Make a new directory for latest fabric sample**
 <br><br>
@@ -130,6 +130,7 @@ Install the latest version of npm if it is not already installed.<br><br>
 <br><br>
 ** use these following two commands to avoid interruptions**<br><br>
 `git config --global core.autocrlf false`
+<br>
 `git config --global core.longpaths true`
 
 **Download the latest release of Fabric samples, docker images, and binaries.**
