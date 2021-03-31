@@ -108,10 +108,12 @@ Install the latest version of nodejs if it is not already installed.<br><br>
 `sudo apt-get install nodejs`
 <br>
 <br>
-## NPM
+
+## npm
 ---
-<br>Install the latest version of npm if it is not already installed.<br><br>
+Install the latest version of npm if it is not already installed.<br><br>
 `sudo apt-get install npm`
+
 <br>
 <br>
 <br>
