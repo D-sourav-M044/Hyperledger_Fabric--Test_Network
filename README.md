@@ -117,8 +117,21 @@ Install the latest version of npm if it is not already installed.<br><br>
 <br>
 <br>
 <br>
-
+---
 # Download Fabric samples, docker images, and binaries.
 
-
+**Make a new directory for latest fabric sample**
+<br><br>
+`mkdir hyper`
+`cd hyper`
+<br><br>
+**Download the latest release of Fabric samples, docker images, and binaries.**
+<br><br>
+`curl -sSL https://bit.ly/2ysbOFE | bash -s`
+<br>**To download a specific release, pass a version identifier for Fabric and Fabric CA Docker images. The command below demonstrates how to download the latest production releases -**<br>`<br>
+`curl -sSL https://bit.ly/2ysbOFE | bash -s -- <fabric_version> <fabric-ca_version>`
+`curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.3.1 1.4.9`
+<br><br> 
+**If you get server error, you can use these following commands-**
+<br><br>
 
