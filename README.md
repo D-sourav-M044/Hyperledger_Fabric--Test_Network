@@ -170,23 +170,73 @@ Install the latest version of npm if it is not already installed.<br><br>
  `./network.sh up`
  <br>
  <br>
- **This command creates a Fabric network that consists of two peer nodes, one ordering node. No channel is created when you run ./network.sh up, though we will get there in a future step. If the command completes successfully, you will see the logs of the nodes being created:**
- <br>
- <br>
- `
- Creating network "fabric_test" with the default driver<br>
-Creating volume "net_orderer.example.com" with default driver<br>
-Creating volume "net_peer0.org1.example.com" with default driver<br>
-Creating volume "net_peer0.org2.example.com" with default driver<br>
-Creating peer0.org2.example.com ... done<br>
-Creating orderer.example.com    ... done<br>
-Creating peer0.org1.example.com ... done<br>
-Creating cli                    ... done<br>
-CONTAINER ID   IMAGE                               COMMAND             CREATED         STATUS                  PORTS                                            NAMES<br>
-1667543b5634   hyperledger/fabric-tools:latest     "/bin/bash"         1 second ago    Up Less than a second                                                    cli<br>
-b6b117c81c7f   hyperledger/fabric-peer:latest      "peer node start"   2 seconds ago   Up 1 second             0.0.0.0:7051->7051/tcp                           peer0.org1.example.com<br>
-703ead770e05   hyperledger/fabric-orderer:latest   "orderer"           2 seconds ago   Up Less than a second   0.0.0.0:7050->7050/tcp, 0.0.0.0:7053->7053/tcp   orderer.example.com<br>
-718d43f5f312   hyperledger/fabric-peer:latest      "peer node start"   2 seconds ago   Up 1 second             7051/tcp, 0.0.0.0:9051->9051/tcp                 peer0.org2.example.com<br>
-`
- 
- 
+**After your test network is deployed, you can take some time to examine its components. Run the following command to list all of Docker containers that are running on your machine. You should see the three nodes that were created by the network.sh script:**
+<br>
+<br>
+`docker ps -a`
+<br>
+<br
+**You can use the network.sh script to create a channel between Org1 and Org2 and join their peers to the channel. Run the following command to create a channel with the default name of mychannel:**
+<br>
+<br>
+`./network.sh createChannel`
+<br>
+<br>
+**You can also use the channel flag to create a channel with custom name. As an example, the following command would create a channel named channel1:**
+<br>
+<br>
+`./network.sh createChannel -c channel1`
+<br>
+<br>
+**After you have used the network.sh to create a channel, you can start a chaincode on the channel using the following command:**
+`./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-go -ccl go`
+<br>
+<br>
+**Make sure that you are operating from the test-network directory. If you followed the instructions to install the Samples, Binaries and Docker Images, You can find the peer binaries in the bin folder of the fabric-samples repository. Use the following command to add those binaries to your CLI Path:**
+<br>
+<br>
+`export PATH=${PWD}/../bin:$PATH`
+<br>
+<br>
+**You also need to set the FABRIC_CFG_PATH to point to the core.yaml file in the fabric-samples repository:**
+<br>
+<br>
+`export FABRIC_CFG_PATH=$PWD/../config/`
+<br>
+<br>
+**You can now set the environment variables that allow you to operate the peer CLI as Org1:**
+<br>
+<br>
+export CORE_PEER_TLS_ENABLED=true
+export CORE_PEER_LOCALMSPID="Org1MSP"
+export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+export CORE_PEER_ADDRESS=localhost:7051
+<br>
+<br>
+**Run the following command to initialize the ledger with assets:**
+<br>
+<br>
+`peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"InitLedger","Args":[]}'`
+<br>
+<br>
+**You can now query the ledger from your CLI. Run the following command to get the list of assets that were added to your channel ledger:**
+<br>
+<br>
+`peer chaincode query -C mychannel -n basic -c '{"Args":["GetAllAssets"]}'`
+<br>
+<br>
+**Chaincodes are invoked when a network member wants to transfer or change an asset on the ledger. Use the following command to change the owner of an asset on the ledger by invoking the asset-transfer (basic) chaincode:**
+<br>
+<br>
+`peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"TransferAsset","Args":["asset6","Christopher"]}'`
+<br>
+<br>
+**you can do all the same process for org2 also**
+<br>
+**After you have done all of this successfully-down the network**
+<br>
+<br>
+`./network.sh down`
+<br>
+<br>
