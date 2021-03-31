@@ -32,7 +32,6 @@ Install the latest version of cURL if it is not already installed.<br><br>
 <br>
 <br>
 <br>
-<br>
 
 ### Docker
 ---
@@ -41,7 +40,7 @@ Install the latest version of Docker if it is not already installed.<br><br>
 <br><br>Make permission For Docker<br><br>
 `dockr ps -a`
 
-<br>
+
 <br>
 <br>
 <br>
@@ -67,7 +66,7 @@ Sometimes latest docker don't comes with the latest version. So you can do it ma
 `sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) -o $DESTINATION`
 `sudo chmod 755 $DESTINATION`
 
-<br>
+
 <br>
 <br>
 <br>
@@ -79,7 +78,7 @@ Make sure the Docker daemon is running.<br><br>
 <br><br>  Optional: If you want the Docker daemon to start when the system starts, use the following:<br><br>
 `sudo systemctl enable docker`
 
-<br>
+
 <br>
 <br>
 <br>
@@ -89,7 +88,7 @@ Make sure the Docker daemon is running.<br><br>
 Add your user to the Docker group.<br><br>
 `sudo usermod -a -G docker <username>`
 
-<br>
+
 <br>
 <br>
 <br>
