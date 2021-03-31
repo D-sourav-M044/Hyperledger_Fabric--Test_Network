@@ -117,14 +117,21 @@ Install the latest version of npm if it is not already installed.<br><br>
 <br>
 <br>
 <br>
----
+<br>
+<br>
 # Download Fabric samples, docker images, and binaries.
+---
+
 
 **Make a new directory for latest fabric sample**
 <br><br>
 `mkdir hyper`
 `cd hyper`
 <br><br>
+** use these following two commands to avoid interruptions**<br><br>
+`git config --global core.autocrlf false`
+`git config --global core.longpaths true`
+
 **Download the latest release of Fabric samples, docker images, and binaries.**
 <br><br>
 `curl -sSL https://bit.ly/2ysbOFE | bash -s`
@@ -134,4 +141,5 @@ Install the latest version of npm if it is not already installed.<br><br>
 <br><br> 
 **If you get server error, you can use these following commands-**
 <br><br>
-
+`curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh | bash -s -- 2.3.1 1.4.9`
+<br><br> you can also use version 1.1.0<br> 
