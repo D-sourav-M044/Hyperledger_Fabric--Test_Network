@@ -22,8 +22,8 @@ Install the latest version of cURL if it is not already installed.<br>
 ### Docker
 Install the latest version of Docker if it is not already installed.<br>
 `Sudo apt install docker`
-Make permission For Docker
-'dockr ps -a'
+<br>Make permission For Docker
+`dockr ps -a`
 ### Docker-Compose
 Install the latest version of Docker-Compose if it is not already installed.<br>
-'sudo apt-get -y install docker-compose'
+`sudo apt-get -y install docker-compose`
