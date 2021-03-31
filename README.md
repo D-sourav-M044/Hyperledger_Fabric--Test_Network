@@ -13,12 +13,11 @@
 # Prerequisites-
 ## **Linux**
 ------------
+---
 ### Git
+---
 Install the latest version of git if it is not already installed.<br>
-<br>
----
 `sudo apt-get install git`
----
 
 
 ### cURL
