@@ -129,7 +129,7 @@ Install the latest version of npm if it is not already installed.<br><br>
 <br>
 `cd hyper`
 <br><br>
-** use these following two commands to avoid interruptions**<br><br>
+**use these following two commands to avoid interruptions**<br><br>
 `git config --global core.autocrlf false`
 <br>
 `git config --global core.longpaths true`
