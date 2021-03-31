@@ -21,6 +21,8 @@ Install the latest version of git if it is not already installed.<br>
 `sudo apt-get install git`
 <br>
 <br>
+<br>
+<br>
 
 ### cURL
 ---
