@@ -11,6 +11,6 @@
          5. The Application: your blockchain application will utilize the Application SDKs to call smart contracts running on a Fabric network.
  
 # Prerequisites- For Linux
-Install the latest version of git if it is not already installed.
+Install the latest version of git if it is not already installed.<br>
 `$ sudo apt-get install git`
  
