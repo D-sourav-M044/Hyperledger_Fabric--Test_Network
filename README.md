@@ -100,13 +100,23 @@ Extract the Golang executable to /usr/local.<br><br>
 <br><br>**4. Test the Installation**<br>
 Verify you installed the expected version of Golang.<br><br>
 `go version`
+<br>
+<br>
+## Node.js
+---
+Install the latest version of nodejs if it is not already installed.<br><br>
+`sudo apt-get install nodejs`
+<br>
+<br>
+## NPM
+Install the latest version of npm if it is not already installed.<br><br>
+`sudo apt-get install npm`
+<br>
+<br>
+<br>
+---
+---
+#Download Fabric samples, docker images, and binaries.<br><br>
 
 
 
-
-
-<style>
-H1{color:Blue !important;}
-H2{color:DarkOrange !important;}
-p{color:Black !important;}
-</style>
