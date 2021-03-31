@@ -22,8 +22,29 @@ Install the latest version of cURL if it is not already installed.<br>
 ### Docker
 Install the latest version of Docker if it is not already installed.<br>
 `Sudo apt install docker`
-<br>Make permission For Docker
+<br>Make permission For Docker<br>
 `dockr ps -a`
 ### Docker-Compose
 Install the latest version of Docker-Compose if it is not already installed.<br>
 `sudo apt-get -y install docker-compose`
+<br>Once installed, confirm that the latest versions of both Docker and Docker Compose executables were installed.<br>
+`docker --version`
+<br>Docker version 19.03.12, build 48a66213fe<br>
+`docker-compose --version`
+<br>docker-compose version 1.27.2, build 18f557f9<br>
+#### Docker-compose Update
+<br> Sometimes latest docker don't comes with the latest version. So you can do it manually with the following process-<br>
+<br>Remove the previous version of docker-compose<br>
+`sudo apt-get remove docker-compose`
+`sudo rm /usr/local/bin/docker-compose`
+<br>version set<br>
+`VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)`
+<br>Installation<br>
+`DESTINATION=/usr/local/bin/docker-compose`
+`sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) -o $DESTINATION`
+`sudo chmod 755 $DESTINATION`
+
+
+
+
+
