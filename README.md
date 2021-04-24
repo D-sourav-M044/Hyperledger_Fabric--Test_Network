@@ -104,7 +104,7 @@ Verify you installed the expected version of Golang.<br><br>
 <br>
 ## Node.js
 ---
-Install the latest version of nodejs if it is not already installed.<br><br>
+Install the latest version of nodejs if it is not already installed(optional).<br><br>
 `sudo apt-get install nodejs`
 <br>
 <br>
